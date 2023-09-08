@@ -3,12 +3,6 @@
   include_vars:
     file: for_vars.yml
 
-- name: Update all packages to latest version
-  become: true
-  apt:
-    update_cache: yes
-    cache_valid_time: 604800
-
 - name: Install forensics, crypto-stego and reverse-engineering tools
   package:
     name: "{{ item }}"
@@ -58,3 +52,19 @@
     path: /home/vagrant/.zshrc
     line: "{{ item }}"
   with_items: "{{ alias_items }}"
+
+- name: Download verifyhash from github
+  get_url:
+    url: "https://raw.githubusercontent.com/brootware/verify-hash.sh/master/verify-hash.sh"
+    dest: "/tmp/verifyhash"
+
+- name: Make verifyhash executable
+  become: true
+  file:
+    path: "/tmp/verifyhash"
+    mode: "u+x"
+
+- name: Move verifyhash to /opt directory
+  command:
+    cmd: "mv /tmp/verifyhash /opt/verifyhash"
+    creates: "/opt/verifyhash"

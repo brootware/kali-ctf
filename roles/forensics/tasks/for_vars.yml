@@ -19,6 +19,9 @@ pip_modules:
   - oletools
   - olefile
 
+blue_dir: /opt/
+oledump_dir: "{{ blue_dir }}oledump/"
+
 oledump_version: "0_0_75"
 oledump_checksum: sha256:D357E48D827822D15C9C22C0B5204924FBA9FC59104818C9824AD149FE6F6249
 oledump_py: oledump.py

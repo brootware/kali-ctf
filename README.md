@@ -20,6 +20,7 @@ packages:
   - volatility3
   - olevba
   - oledump
+  - verifyhash
 ```
 
 Red team tools
