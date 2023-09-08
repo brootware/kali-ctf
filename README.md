@@ -23,20 +23,43 @@ packages:
   - verifyhash
 ```
 
-Red team tools
-
-```yaml
-packages:
-  - tobeadded
-```
-
 ## Pre-requisites
 
-- (Virtualbox)[https://www.virtualbox.org/wiki/Downloads]
-- (Vagrant)[https://www.vagrantup.com/downloads]
+- [Virtualbox](https://www.virtualbox.org/wiki/Downloads)
+- [Vagrant](https://www.vagrantup.com/downloads)
+- [chocolatey](https://chocolatey.org/install)
+- [brew](https://brew.sh/)
 - Recommended to have at least 16GB RAM on your PC, MAC or Linux.
 
 ## How to use
+
+On Windows
+
+```pwsh
+choco install vagrant
+choco install python3 --pre 
+python3 -m venv .venv
+.\venv\bin\Activate.ps1
+python3 -m pip install --upgrade pip
+python3 -m pip install ansible-core==2.12.6
+vagrant up
+```
+
+On Mac
+
+```bash
+brew install python3
+python3 -m pip install pipx
+pipx ensurepath
+pipx install python3-venv
+python3 -m venv .venv
+source .venv/bin/activate
+python3 -m pip install --upgrade pip
+python3 -m pip install ansible-core==2.12.6
+vagrant up
+```
+
+On Linux
 
 ```bash
 sudo apt install python3-venv
