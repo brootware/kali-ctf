@@ -4,6 +4,8 @@
 
 Kali-CTF automates downloading and installation of additional tools, frameworks and packages in a Kali virtual machine. The tool installs defensive/forensics (Blue team) tools in addition to Offensive (Red team) tools for Capture The Flag (CTF) competitions.
 
+> Only supported for Mac and Linux users currently.
+
 ## What's included
 
 Blue team tools
@@ -34,18 +36,6 @@ packages:
 - Recommended to have at least 16GB RAM on your PC, MAC or Linux.
 
 ## How to use
-
-On Windows
-
-```pwsh
-choco install vagrant
-choco install python3 --pre 
-python3 -m venv .venv
-.\venv\bin\Activate.ps1
-python3 -m pip install --upgrade pip
-python3 -m pip install ansible-core==2.12.6
-vagrant up
-```
 
 On Mac
 
