@@ -2,4 +2,8 @@
 - hosts:
     - all
     - localhost
-  become: yes
+  become: true
+
+  roles:
+    - chown-dirs
+    - forensics-blue

@@ -1,0 +1,3 @@
+user_dir: root
+blue_dir: /opt/forensics/
+oledump_dir: "{{ blue_dir }}oledump/"
