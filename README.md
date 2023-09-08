@@ -1,6 +1,6 @@
 # Fast-lab
 
-Fast-lab automates downloading and installation of additional tools, frameworks and packages in a Kali virtual machine. The tool installs both offensive (Red) and defensive/forensics (Blue) tools for Capture The Flag (CTF) competitions.
+Fast-lab automates downloading and installation of additional tools, frameworks and packages in a Kali virtual machine. The tool installs defensive/forensics (Blue team) tools in addition to Offensive (Red team) tools for Capture The Flag (CTF) competitions.
 
 ## What's included
 
