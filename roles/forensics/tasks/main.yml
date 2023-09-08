@@ -7,7 +7,7 @@
   become: true
   apt:
     update_cache: yes
-    cache_valid_time: 86400
+    cache_valid_time: 604800
 
 - name: Install forensics, crypto-stego and reverse-engineering tools
   package:
