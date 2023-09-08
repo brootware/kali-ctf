@@ -13,8 +13,8 @@ forensic_tools:
 
 vol3_dir: volatility3
 
-oledump_version: "0_0_60"
-oledump_checksum: sha256:D847E499CB84B034E08BCDDC61ADDADA39B90A5FA2E1ABA0756A05039C0D8BA2
+oledump_version: "0_0_75"
+oledump_checksum: sha256:D357E48D827822D15C9C22C0B5204924FBA9FC59104818C9824AD149FE6F6249
 oledump_py: oledump.py
 
 alias_items:
