@@ -1,7 +1,13 @@
 ---
 packages:
-  - kali-tools-forensics
-  - kali-tools-reverse-engineering
+  - foremost
+  - sleuthkit
+  - autopsy
+  - fcrackzip
+  - gdb
+  - exiftool
+  - radare2
+  - rz-ghidra
   - kali-tools-crypto-stego
 
 vol3_git:
@@ -12,7 +18,7 @@ vol3_dir: volatility3
 pip_modules:
   - oletools
   - olefile
-  
+
 oledump_version: "0_0_75"
 oledump_checksum: sha256:D357E48D827822D15C9C22C0B5204924FBA9FC59104818C9824AD149FE6F6249
 oledump_py: oledump.py
