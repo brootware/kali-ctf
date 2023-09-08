@@ -21,7 +21,6 @@ VM_UPDATE = true
 
 # ATTACK_VM: can be changed here
 ATTACK_VM = "attackerkali"
-FORENSICS_VM = "forensicslab"
 
 
 # VM_CPUS: specify the number of CPU cores to allocate to the VM

@@ -9,20 +9,20 @@
     update_cache: yes
     cache_valid_time: 86400
 
-- name: Install foremost, exiftool, steghide
+- name: Install forensics, crypto-stego and reverse-engineering tools
   package:
     name: "{{ item }}"
     state: latest
   become: true
   with_items: "{{ packages }}"
 
-- name: Clone forensic tools.
+- name: Clone volatility repo.
   git:
     repo: "{{ item }}"
     dest: "{{ blue_dir }}{{ item.split('/')[-1].replace('.git','') }}"
     version: stable
     force: yes
-  with_items: "{{ forensic_tools }}"
+  with_items: "{{ vol3_git }}"
   become: true
 
 - name: Install volatility 3 requirements
