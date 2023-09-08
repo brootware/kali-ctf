@@ -55,6 +55,6 @@
 
 - name: Add forensic tools alias to .zshrc
   lineinfile:
-    path: ~/.zshrc
+    path: /home/vagrant/.zshrc
     line: "{{ item }}"
   with_items: "{{ alias_items }}"
