@@ -1,6 +1,6 @@
 #!/bin/bash
 
-git clone https://github.com/brootware/fast-labs.git && cd fast-labs
+git clone https://github.com/brootware/kali-ctf.git && cd kali-ctf
 sudo apt install python3-venv
 python3 -m venv .venv
 source .venv/bin/activate
