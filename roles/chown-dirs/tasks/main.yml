@@ -10,10 +10,6 @@
   ignore_errors: true
 
   loop:
-    - "{{ re_dir }}"
-    - "{{ c2_dir }}"
-    - "{{ pwn_win_dir }}"
-    - "{{ pwn_lin_dir }}"
     - "{{ blue_dir }}"
     - "{{ oledump_dir }}"
   become: true
@@ -28,10 +24,6 @@
   when: result is failed
 
   loop:
-    - "{{ re_dir }}"
-    - "{{ c2_dir }}"
-    - "{{ pwn_win_dir }}"
-    - "{{ pwn_lin_dir }}"
     - "{{ blue_dir }}"
     - "{{ oledump_dir }}"
   become: true
