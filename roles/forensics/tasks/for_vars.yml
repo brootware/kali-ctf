@@ -4,10 +4,7 @@ packages:
   - sleuthkit
   - autopsy
   - fcrackzip
-  - gdb
   - exiftool
-  - radare2
-  - rz-ghidra
   - kali-tools-crypto-stego
 
 vol3_git:

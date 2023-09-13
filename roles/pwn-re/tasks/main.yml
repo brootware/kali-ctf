@@ -21,7 +21,7 @@
   git:
     repo: "{{ item }}"
     dest: "{{ download_dir }}{{ item.split('/')[-1].replace('.git','') }}"
-    version: master
+    version: dev
     force: yes
   with_items: "{{ install_script_git }}"
   become: true
