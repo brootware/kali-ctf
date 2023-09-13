@@ -14,8 +14,8 @@ pip_modules:
 download_dir: /opt/
 pwndbg_dir: "{{ download_dir }}"
 
-install_script_git: https://github.com/apogiatzis/gdb-peda-pwndbg-gef.git
+install_script_git: https://github.com/pwndbg/pwndbg
 install_script_dir: gdb-peda-pwndbg-gef
 
 checksec_version: "2.6.0"
-checksec_checksum: sha256:D357E48D827822D15C9C22C0B5204924FBA9FC59104818C9824AD149FE6F6249
+# checksec_checksum: sha256:D357E48D827822D15C9C22C0B5204924FBA9FC59104818C9824AD149FE6F6249

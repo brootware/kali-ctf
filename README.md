@@ -8,7 +8,7 @@ Kali-CTF automates downloading and installation of additional tools, frameworks 
 
 ## What's included
 
-Blue team tools
+Forensic tools
 
 ```yaml
 packages:
@@ -16,15 +16,24 @@ packages:
   - sleuthkit
   - autopsy
   - fcrackzip
-  - gdb
   - exiftool
-  - radare2
-  - rz-ghidra
   - kali-tools-crypto-stego
   - volatility3
   - olevba
   - oledump
   - verifyhash
+```
+
+Binary exploitation and Reverse Engineering tools
+
+```yaml
+packages:
+  - gdb
+  - radare2
+  - rz-ghidra
+  - ghidra
+  - checksec
+  - ropper
 ```
 
 ## Pre-requisites
