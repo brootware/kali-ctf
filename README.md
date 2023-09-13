@@ -42,8 +42,8 @@ On Mac
 ```bash
 brew install python3
 python3 -m pip install pipx
-pipx ensurepath
-pipx install python3-venv
+python3 -m pipx ensurepath
+python3 -m pipx install virtualenv
 python3 -m venv .venv
 source .venv/bin/activate
 python3 -m pip install --upgrade pip
