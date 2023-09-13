@@ -17,7 +17,7 @@
   with_items: "{{ pip_modules }}"
   become: true
 
-- name: Clone Peda+pwndbg+GEF plugins installation repo
+- name: Clone pwndbg plugins installation repo
   git:
     repo: "{{ item }}"
     dest: "{{ download_dir }}{{ item.split('/')[-1].replace('.git','') }}"
