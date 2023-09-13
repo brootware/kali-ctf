@@ -71,8 +71,17 @@ python3 -m pip install ansible-core==2.12.6
 vagrant up
 ```
 
-### If the vm is already provisioned and you just want to run the playbooks
+### Retries and errors
+
+If the VM is already provisioned, try running below again to provision until the errors are gone.
 
 ```bash
 vagrant provision
 ```
+
+Once provisioning is done, run below to install pwn-dbg plugin for gdb debugger within kali session.
+
+```bash
+/opt/pwndbg/setup.sh 
+```
+
