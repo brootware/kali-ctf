@@ -1,0 +1,27 @@
+---
+# tasks file for roles/pwn-re
+- name: Include vars.yml file.
+  include_vars:
+    file: main.yml
+
+- name: Install checksec, binary exploitation tools
+  package:
+    name: "{{ item }}"
+    state: latest
+  become: true
+  with_items: "{{ packages }}"
+
+- name: Install pwntool for reverse engineering
+  pip:
+    name: "{{ item }}"
+  with_items: "{{ pip_modules }}"
+  become: true
+
+- name: Clone Peda+pwndbg+GEF plugins installation repo
+  git:
+    repo: "{{ item }}"
+    dest: "{{ download_dir }}{{ item.split('/')[-1].replace('.git','') }}"
+    version: master
+    force: yes
+  with_items: "{{ install_script_git }}"
+  become: true

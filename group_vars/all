@@ -1,3 +1,4 @@
 user_dir: root
-blue_dir: /opt/
-oledump_dir: "{{ blue_dir }}oledump/"
+opt_dir: /opt/
+oledump_dir: "{{ opt_dir }}oledump/"
+# checksec_dir: "{{ download_dir }}checksec/"

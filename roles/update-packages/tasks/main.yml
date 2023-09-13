@@ -4,3 +4,30 @@
     update_cache: yes
     cache_valid_time: 604800
   become: true
+
+- name: Chown RE Dir to logged in user. (Might fail if you're executing via Vagrant. You can ignore the errors here.)
+  file:
+    path: "{{ item }}"
+    owner: "{{ lookup('env','USER') }}"
+    group: "{{ lookup('env','USER') }}"
+    mode: "744"
+    recurse: yes
+  register: result
+  ignore_errors: true
+
+  loop:
+    - "{{ oledump_dir }}"
+  become: yes
+
+- name: Chown RE Dir as remote vagrant user
+  file:
+    path: "{{ item }}"
+    owner: "{{ ansible_ssh_user }}"
+    group: "{{ ansible_ssh_user }}"
+    mode: "744"
+    recurse: yes
+  when: result is failed
+
+  loop:
+    - "{{ oledump_dir }}"
+  become: yes

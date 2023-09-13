@@ -41,17 +41,23 @@
     dest: "{{ oledump_dir }}"
     remote_src: yes
 
+- name: Make oledump executable
+  become: true
+  file:
+    path: "{{ oledump_dir }}oledump.py"
+    mode: "u+x"
+
 - name: Removing oledump zip
   file:
     path: "{{ blue_dir }}oledump_V{{ oledump_version }}.zip"
     state: absent
   become: true
 
-- name: Add forensic tools alias to .zshrc
+- name: Add forensic tools alias and /opt path to .zshrc
   lineinfile:
     path: /home/vagrant/.zshrc
     line: "{{ item }}"
-  with_items: "{{ alias_items }}"
+  with_items: "{{ zshrc_items }}"
 
 - name: Download verifyhash from github
   get_url:
@@ -59,7 +65,6 @@
     dest: "/tmp/verifyhash"
 
 - name: Make verifyhash executable
-  become: true
   file:
     path: "/tmp/verifyhash"
     mode: "u+x"
@@ -68,3 +73,4 @@
   command:
     cmd: "mv /tmp/verifyhash /opt/verifyhash"
     creates: "/opt/verifyhash"
+

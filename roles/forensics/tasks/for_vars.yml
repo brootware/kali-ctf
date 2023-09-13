@@ -26,7 +26,9 @@ oledump_version: "0_0_75"
 oledump_checksum: sha256:D357E48D827822D15C9C22C0B5204924FBA9FC59104818C9824AD149FE6F6249
 oledump_py: oledump.py
 
-alias_items:
+zshrc_items:
   - "# Additional alias from kali-up forensics-blue role"
   - "alias oledump={{ oledump_dir }}{{ oledump_py }}"
   - "alias vol3={{ blue_dir }}{{ vol3_dir }}/vol.py"
+  - "export PATH=$PATH:/opt"
+  - "export PATH=$PATH:~/.local/bin"
