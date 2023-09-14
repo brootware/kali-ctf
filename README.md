@@ -82,6 +82,7 @@ vagrant provision
 Once provisioning is done, run below to install pwn-dbg plugin for gdb debugger within kali session.
 
 ```bash
-/opt/pwndbg/setup.sh 
+cd /opt/pwndbg/
+./setup.sh
 ```
 
