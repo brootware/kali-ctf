@@ -10,13 +10,14 @@
     path: "{{ item }}"
     owner: "{{ lookup('env','USER') }}"
     group: "{{ lookup('env','USER') }}"
-    mode: "744"
+    mode: "755"
     recurse: yes
   register: result
   ignore_errors: true
 
   loop:
     - "{{ oledump_dir }}"
+    - "{{ opt_dir }}"
   become: yes
 
 - name: Chown RE Dir as remote vagrant user
@@ -24,10 +25,11 @@
     path: "{{ item }}"
     owner: "{{ ansible_ssh_user }}"
     group: "{{ ansible_ssh_user }}"
-    mode: "744"
+    mode: "755"
     recurse: yes
   when: result is failed
 
   loop:
     - "{{ oledump_dir }}"
+    - "{{ opt_dir }}"
   become: yes

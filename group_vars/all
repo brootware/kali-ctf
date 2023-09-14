@@ -1,4 +1,3 @@
 user_dir: root
 opt_dir: /opt/
 oledump_dir: "{{ opt_dir }}oledump/"
-# checksec_dir: "{{ download_dir }}checksec/"
