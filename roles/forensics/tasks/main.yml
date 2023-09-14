@@ -65,6 +65,7 @@
     dest: "/tmp/verifyhash"
 
 - name: Make verifyhash executable
+  become: true
   file:
     path: "/tmp/verifyhash"
     mode: "u+x"

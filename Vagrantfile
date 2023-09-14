@@ -1,4 +1,4 @@
-# kali-up
+# kali-ctf
 # Credit - This vagrantfile is developed by referring to https://github.com/stevemcilwain/Disposable-Kali/blob/master/Vagrantfile
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
