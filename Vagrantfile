@@ -56,6 +56,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
     # Ansible provisioner.
     config.vm.provision :ansible do |ansible|
-        ansible.playbook = "site.yml"
+        ansible.playbook = "install.yml"
     end
 end
