@@ -46,7 +46,7 @@ packages:
 
 ## How to use
 
-On Mac
+On Mac (Intel Chips)
 
 ```bash
 brew install python3
@@ -69,6 +69,29 @@ source .venv/bin/activate
 python3 -m pip install --upgrade pip
 python3 -m pip install ansible-core==2.12.6
 vagrant up
+```
+
+On Windows
+
+Install kali linux via wsl2 and follow this guide to install kex.
+https://www.kali.org/docs/wsl/win-kex/
+
+Run kex
+
+```bash
+kex --win -s
+```
+
+go into the newly spun up kali vm
+
+```bash
+git clone https://github.com/brootware/kali-ctf.git
+sudo apt install python3-venv
+python3 -m venv .venv
+source .venv/bin/activate
+python3 -m pip install --upgrade pip
+python3 -m pip install ansible-core==2.12.6
+ansible-playbook install.yml
 ```
 
 ### Retries and errors
