@@ -4,7 +4,7 @@
 
 Kali-CTF automates downloading and installation of additional tools, frameworks and packages in a Kali virtual machine. The tool installs defensive/forensics (Blue team) tools in addition to Offensive (Red team) tools for Capture The Flag (CTF) competitions.
 
-> Only supported for **Mac(Intel)** and **Linux hosts** currently.
+> Vagrant usage is only supported for **Mac(Intel)** and **Linux hosts** currently. For windows and Mac with apple silicon chips, run the playbook locally.
 
 ## What's included
 
