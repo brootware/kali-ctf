@@ -22,6 +22,7 @@
 - name: Install volatility 3 requirements
   pip:
     requirements: "{{ blue_dir }}{{ vol3_dir }}/requirements.txt"
+  ignore_errors: true
 
 - name: Install olevba via pip for analyzing macros
   pip:
@@ -55,7 +56,7 @@
 
 - name: Add forensic tools alias and /opt path to .zshrc
   lineinfile:
-    path: /home/vagrant/.zshrc
+    path: "{{ lookup('ansible.builtin.env', 'HOME') }}/.zshrc"
     line: "{{ item }}"
   with_items: "{{ zshrc_items }}"
 
