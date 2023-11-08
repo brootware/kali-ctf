@@ -54,11 +54,24 @@
     state: absent
   become: true
 
-- name: Add forensic tools alias and /opt path to .zshrc
+- name: Add forensic tools alias and /opt path to .zshrc in local machine
   lineinfile:
     path: "{{ lookup('ansible.builtin.env', 'HOME') }}/.zshrc"
     line: "{{ item }}"
   with_items: "{{ zshrc_items }}"
+  register: result
+  ignore_errors: true
+
+- name: remote
+  ansible.builtin.debug:
+    msg: "'{{ ansible_env.HOME }}' is the HOME environment variable."
+
+- name: Add forensic tools alias and /opt path to .zshrc in remote machine
+  lineinfile:
+    path: "{{ ansible_env.HOME }}/.zshrc"
+    line: "{{ item }}"
+  with_items: "{{ zshrc_items }}"
+  when: result is failed
 
 - name: Download verifyhash from github
   get_url:
